@@ -5,14 +5,14 @@
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Start project 
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Start back-end
 ```
-yarn build
+yarn backend
 ```
 
 ### Run your unit tests
