@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/partidas',
     name: 'partidas',
-    component: () => import('../views/AboutView.vue'),
+    component: () => import('../views/MatchView.vue'),
   },
 ];
 

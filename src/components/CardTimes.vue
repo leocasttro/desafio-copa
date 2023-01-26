@@ -5,7 +5,7 @@
       <ul>
         <li>
           <ul>
-            <img src="../../assets/Brasil.png" alt="">
+            <img :src="`../../assets/${time.name}.png`" alt="">
             <li class="celOne">{{ time.name }}</li>
             <li>NÚMERO DE JOGADORES</li>
             <li>PARTIDAS JOGADAS</li>

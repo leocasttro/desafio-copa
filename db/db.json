@@ -1,7 +1,7 @@
 {
   "times": [
     {
-      "name": "BRASIL",
+      "name": "brasil",
       "players": 24,
       "attackers": 20,
       "defenders": 10,
@@ -14,36 +14,6 @@
         }
       ],
       "id": 1
-    },
-    {
-      "name": "argentina",
-      "players": 24,
-      "attackers": 8,
-      "defenders": 8,
-      "midfielders": 8,
-      "match": [
-        {
-          "matchs": 0,
-          "wins": 0,
-          "defeats": 0
-        }
-      ],
-      "id": 2
-    },
-    {
-      "name": "argelia",
-      "players": 24,
-      "attackers": 8,
-      "defenders": 10,
-      "midfielders": 2,
-      "match": [
-        {
-          "matchs": 0,
-          "wins": 0,
-          "defeats": 0
-        }
-      ],
-      "id": 3
     }
   ]
 }

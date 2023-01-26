@@ -40,7 +40,6 @@ export default {
     },
     emitSelectedOption() {
       this.$emit('updateSelectedOption', this.selectedOption);
-      console.log(this.selectedOption);
     },
   },
   watch: {

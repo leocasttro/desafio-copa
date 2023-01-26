@@ -1,8 +1,14 @@
+<!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable vuejs-accessibility/label-has-for -->
 <template>
   <div class="container">
     <div class="upload">
-      <img src="../../assets/upload-banner.png" alt="">
+      <label></label>
+      <input ref="fileInput" type="file"  hidden>
+      <img @click="openFileDialog"
+      @change="handleFileUpload"
+      src="../../assets/upload-banner.png" alt=""
+      >
     </div>
     <div class="form-container">
     <form @submit="submitForm">
@@ -47,9 +53,17 @@ export default {
       attackers: null,
       defenders: null,
       midfielders: null,
+      image: null,
     };
   },
   methods: {
+    openFileDialog() {
+      this.$refs.fileInput.click();
+    },
+    handleFileUpload() {
+      const { files } = this.$refs.fileInput;
+      this.image = files?.[0];
+    },
     async submitForm(event) {
       event.preventDefault();
       const data = {
@@ -59,6 +73,7 @@ export default {
         defenders: this.defenders,
         midfielders: this.midfielders,
         match: this.match,
+        image: this.image,
       };
       const dataJson = JSON.stringify(data);
       console.log(dataJson);
@@ -75,6 +90,9 @@ export default {
       this.attackers = '';
       this.defenders = '';
       this.midfielders = '';
+    },
+    teste() {
+      console.log('teste');
     },
   },
 
@@ -122,6 +140,7 @@ img {
 input {
   background: #2B2F40;
   border: 1px solid #191B25;
+  color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   margin: 10px 0;
   width: 256px;
