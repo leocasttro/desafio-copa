@@ -1,29 +1,28 @@
 # desafio-copa
 
-## Project setup
+## Instalar dependencias 
 ```
 yarn install
 ```
 
-### Start project 
+### Iniciar Projeto
 ```
 yarn serve
 ```
 
-### Start back-end
+### Iniciar back-end
 ```
 yarn backend
 ```
 
-### Run your unit tests
+### Detalhes do projeto
 ```
-yarn test:unit
+Sistema criado para simular jogos da copa do mundo, permitindo ao usuário cadastrar os times e simular as próximas partidas.
+
+Desenvolvido com:
+- Axios
+- Vue 3
+- Vue-router
+- API ruby on rails
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
