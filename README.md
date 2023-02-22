@@ -17,7 +17,8 @@ yarn backend
 
 ### Detalhes do projeto
 ```
-Sistema criado para simular jogos da copa do mundo, permitindo ao usuário cadastrar os times e simular as próximas partidas.
+Sistema criado para simular jogos da copa do mundo, permitindo 
+ao usuário cadastrar os times e simular as próximas partidas.
 
 Desenvolvido com:
 - Axios
