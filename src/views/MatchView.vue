@@ -4,22 +4,21 @@
       <h1>PRÓXIMA PARTIDA</h1>
       <button @click="show()"><fa icon="flag"/> SORTEAR UMA PARTIDA</button>
     </div>
-    <div class="overlay" v-if="showForm"></div>
-    <div class="popUp" v-if="showForm">
-      <SelectTime @close="close"
-      @showLoading="showLoading"
-      v-bind:value="selectedOption"
-      v-on:updateSelectedOption="updateSelectedOption"/>
-    </div>
-    <div class="overlay" v-if="loading"></div>
-    <div class="popUp" v-if="loading">
-      <LoadingProgress :completeLoading="completeLoading"/>
-    </div>
-    <div class="overlay" v-if="complete"></div>
-    <div class="popUp" v-if="complete">
-      <SetMatch v-bind:selectedOption="selectedOption" />
-    </div>
-
+      <div class="popUp" v-if="showForm">
+        <SelectTime @close="close"
+        @showLoading="showLoading"
+        v-bind:value="selectedOption"
+        v-on:updateSelectedOption="updateSelectedOption"/>
+      </div>
+      <div class="popUp" v-if="loading">
+        <LoadingProgress :completeLoading="completeLoading"/>
+      </div>
+      <div class="popUp" v-if="complete">
+        <SetMatch
+          v-bind:selectedOption="selectedOption"
+          @viewMatch="viewMatch"
+        />
+      </div>
     <CardMatch />
   </div>
 
@@ -40,9 +39,6 @@ export default {
       selectedOption: null,
     };
   },
-  setup() {
-
-  },
   components: {
     CardMatch,
     SelectTime,
@@ -61,6 +57,12 @@ export default {
     },
     completeLoading() {
       this.complete = true;
+    },
+    viewMatch() {
+      if (this.loading && this.complete) {
+        this.loading = false;
+        this.complete = false;
+      }
     },
     updateSelectedOption(newVal) {
       this.selectedOption = newVal;

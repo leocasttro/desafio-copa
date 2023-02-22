@@ -1,6 +1,5 @@
 <template>
 <div class="container">
-  <div>x</div>
   <div class="wrapper">
     <h3>SUA PRÓXIMA PARTIDA SERA EM:</h3>
     <span>20 DE DEZEMBRO 2022</span>
@@ -19,7 +18,7 @@
         </ul>
       </div>
     </div>
-    <button>VER PARTIDAS</button>
+    <button @click="onClick">VER PARTIDAS</button>
   </div>
 </div>
 </template>
@@ -33,8 +32,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit('showLoading');
-      this.$emit('close');
+      this.$emit('viewMatch');
     },
     async getPedidos() {
       try {

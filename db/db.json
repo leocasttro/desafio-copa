@@ -14,6 +14,38 @@
         }
       ],
       "id": 1
+    },
+    {
+      "name": "argentina",
+      "players": 24,
+      "attackers": 10,
+      "defenders": 10,
+      "midfielders": 10,
+      "match": [
+        {
+          "matchs": 0,
+          "wins": 0,
+          "defeats": 0
+        }
+      ],
+      "image": null,
+      "id": 2
+    },
+    {
+      "name": "camarões",
+      "players": 24,
+      "attackers": 4,
+      "defenders": 10,
+      "midfielders": 10,
+      "match": [
+        {
+          "matchs": 0,
+          "wins": 0,
+          "defeats": 0
+        }
+      ],
+      "image": null,
+      "id": 3
     }
   ]
 }

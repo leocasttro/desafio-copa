@@ -6,7 +6,7 @@
     </div>
     <div class="overlay" v-if="showForm"></div>
     <div class="popUp" v-if="showForm">
-      <FormAdd :showForm="showForm"/>
+      <FormAdd @close="close"/>
     </div>
     <CardTimes />
   </div>
@@ -26,6 +26,11 @@ export default {
   components: {
     CardTimes,
     FormAdd,
+  },
+  methods: {
+    close() {
+      this.showForm = false;
+    },
   },
 };
 </script>

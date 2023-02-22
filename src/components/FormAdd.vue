@@ -2,6 +2,9 @@
 <!-- eslint-disable vuejs-accessibility/label-has-for -->
 <template>
   <div class="container">
+    <div class="close-button">
+      <fa id="xmark" icon="xmark" @click="onClick"/>
+    </div>
     <div class="upload">
       <label></label>
       <input ref="fileInput" type="file"  hidden>
@@ -57,6 +60,9 @@ export default {
     };
   },
   methods: {
+    onClick() {
+      this.$emit('close');
+    },
     openFileDialog() {
       this.$refs.fileInput.click();
     },
@@ -91,9 +97,6 @@ export default {
       this.defenders = '';
       this.midfielders = '';
     },
-    teste() {
-      console.log('teste');
-    },
   },
 
 };
@@ -105,6 +108,14 @@ export default {
   width: 592px;
   height: 588px;
   background-color: #1C212D;
+}
+.close-button {
+  font-size: 20px;
+  height: 40px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 .form-container {
   display: flex;
@@ -121,7 +132,7 @@ form {
 }
 
 img {
-  margin: 40px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 .name-input {
